@@ -30,7 +30,7 @@ const deleteItem = (id) => {
     <CardPanel>
       <div class="flex self-end flex-col px-4">
         <BasicInput :value="todoInput" @input="(val) => (todoInput = val)" @add:click="addTodo" />
-        <!-- border bottom of tailwind -->
+
         <CardItem
           v-for="item in todoList"
           :key="item.id"
