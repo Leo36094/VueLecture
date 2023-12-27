@@ -11,7 +11,10 @@
 const props = defineProps({
   colorType: {
     type: String,
-    default: 'normal'
+    default: 'normal',
+    validator: (value) => {
+      return ['normal', 'warn', 'danger'].includes(value)
+    }
   },
   active: {
     type: Boolean,
