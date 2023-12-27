@@ -22,7 +22,7 @@ const emits = defineEmits(['input', 'add:click'])
         <span class="material-symbols-outlined text-black"> add </span>
       </div>
       <input
-        class="peer h-full w-full rounded-[7px] text-black border-black bg-transparent px-3 py-2.5 !pr-9 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-black focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+        class="peer h-full w-full rounded-[7px] border-l border-r border-b text-black bg-transparent px-3 py-2.5 !pr-9 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-black focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
         placeholder=" "
         :value="props.value"
         @input="emits('input', $event.target.value)"
