@@ -1,12 +1,10 @@
 <template>
-  <div
-    :class="['text-slate-200	min-w-48 min-h-72 flex-auto border-2', classNameMap[props.colorType]]"
-  >
+  <div :class="['text-slate-200	min-w-48 min-h-72 flex-auto', classNameMap[props.colorType]]">
     <header class="flex justify-between items-center px-2 py-2 bg-slate-200">
       <h2 class="text-md font-bold text-center text-slate-600">{{ props.title }}</h2>
       <ColorButton class="ml-3" :color-type="props.colorType" />
     </header>
-    <div class="mt-2">
+    <div class="flex mt-2">
       <slot />
     </div>
   </div>
@@ -14,7 +12,7 @@
 
 <script setup>
 import ColorButton from '@/components/ColorButton/ColorButton.vue'
-import { CARD_TYPE } from './constants.js'
+import { CARD_TYPE, classNameMap } from './constants.js'
 
 const props = defineProps({
   colorType: {
@@ -29,20 +27,15 @@ const props = defineProps({
     default: 'Card'
   }
 })
-const classNameMap = {
-  normal: 'normal',
-  warn: 'warn',
-  danger: 'danger'
-}
 </script>
-<style>
+<style scoped>
 .normal {
-  @apply bg-sky-500/25;
+  @apply bg-sky-500/50;
 }
 .warn {
-  @apply bg-yellow-500/50;
+  @apply bg-yellow-500;
 }
 .danger {
-  @apply bg-red-500/50;
+  @apply bg-red-500;
 }
 </style>

@@ -6,7 +6,6 @@ import Step1Solution from '@/workshop/Step1Solution.vue'
 
 <template>
   <div class="flex h-[calc(100vh-3rem)] flex-col items-center">
-    <!-- component -->
     <PageContainer>
       <template v-slot:practice>
         <Step1Practice />
