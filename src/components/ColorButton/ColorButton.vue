@@ -1,7 +1,7 @@
 <template>
   <button
     :class="[
-      'flex w-4 h-4 mx-2 my-2 items-center border-solid rounded-md',
+      'flex w-4 h-4 items-center border-solid rounded-md',
       classNameMap[props.colorType]
     ]"
   ></button>
@@ -20,9 +20,9 @@ const classNameMap = {
 }
 
 </script>
-<style>
+<style scoped>
 .normal {
-  @apply bg-cyan-500 hover:bg-cyan-600
+  @apply bg-sky-500/50 hover:bg-sky-500/75
 }
 .warn {
   @apply bg-yellow-500 hover:bg-yellow-600

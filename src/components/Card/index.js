@@ -1,3 +1,5 @@
-import Card from './Card.vue';
+import CardPanel from './CardPanel.vue'
+import { CARD_TYPE } from './constants'
 
-export default Card;
+export { CARD_TYPE }
+export default CardPanel

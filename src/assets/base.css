@@ -56,7 +56,10 @@
 
 body {
   min-height: 100vh;
-  background: #AAD2D6;
+  width: 100%;
+  background-image: url('https://source.unsplash.com/5Lw1U5BIumE');
+  background-size: cover;
+  background-repeat: no-repeat;
   transition:
     color 0.5s,
     background-color 0.5s;
