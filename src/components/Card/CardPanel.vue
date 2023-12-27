@@ -8,7 +8,13 @@
       >
         {{ props.title }}
       </h2>
-      <input class="px-2 py-2 text-slate-500" v-else @keydown.enter="closeInput" v-model="title" />
+      <input
+        v-else
+        class="px-2 py-2 text-slate-500"
+        v-model="title"
+        @keydown.enter="closeInput"
+        @blur="closeInput"
+      />
       <span
         v-if="props.removeIcon"
         class="material-symbols-outlined ml-auto text-black cursor-pointer"
