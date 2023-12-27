@@ -1,9 +1,13 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import ColorButton from '@/components/ColorButton/ColorButton.vue'
+import CardPanel from '@/components/Card/CardPanel.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <ColorButton />
+    <CardPanel color-type="normal" />
+    <CardPanel color-type="warn" />
+    <CardPanel color-type="danger" />
+  </div>
 </template>
