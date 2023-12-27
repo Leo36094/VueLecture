@@ -1,7 +1,7 @@
 <script setup>
-import PageContainer from '@/components/Card/Layout/PageContainer.vue'
-import Step1Practice from '@/workshop/Step1Practice.vue';
-import Step1Solution from '@/workshop/Step1Solution.vue';
+import PageContainer from '@/components/Layout/PageContainer.vue'
+import Step1Practice from '@/workshop/Step1Practice.vue'
+import Step1Solution from '@/workshop/Step1Solution.vue'
 </script>
 
 <template>
