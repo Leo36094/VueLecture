@@ -1,19 +1,18 @@
 <script setup>
-import { ref } from 'vue'
+// Uncomment this block, if you want to use ref
+// import { ref } from 'vue'
 
 import CardPanel from '@/components/Card'
 import CardItem from '@/components/Card/CardItem.vue'
 import BasicInput from '@/components/Input/BasicInput.vue'
 
-const defaultItem = {
-  id: new Date().getTime(),
-  name: 'Example Todo Item'
-}
-
-const todoInput = ref('')
-const todoList = ref([defaultItem])
-
 /**  Practice Start, Uncomment this block
+ const defaultItem = {
+   id: new Date().getTime(),
+   name: 'Example Todo Item'
+ }
+ const todoInput = ref('')
+ const todoList = ref([defaultItem])
 
 const addTodo = () => {
   // Step1: add todo item
@@ -29,8 +28,11 @@ const deleteItem = (id) => {
   <div class="flex flex-col">
     <CardPanel>
       <div class="flex self-end flex-col px-4">
-        <BasicInput :value="todoInput" @input="(val) => (todoInput = val)" />
-        <CardItem v-for="item in todoList" :key="item.id" :item="item.name" />
+        <!-- Tips: binding value to todoInput -->
+        <!-- Tips: See what event is emit by BasicInput, and use it to update value -->
+        <BasicInput />
+        <!-- Tips: Use todoList to render list -->
+        <CardItem />
       </div>
     </CardPanel>
   </div>
