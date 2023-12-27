@@ -14,6 +14,8 @@
 <script setup>
 import { ref } from 'vue'
 import { TAB_TYPE } from './constants.js'
+const emits = defineEmits(['tab:click'])
+
 const activeIndex = ref(0)
 
 const tabs = [TAB_TYPE.PRACTICE, TAB_TYPE.SOLUTION]
@@ -22,6 +24,4 @@ const setActiveIndex = (index) => {
   activeIndex.value = index
   emits('tab:click', tabs[index])
 }
-
-const emits = defineEmits(['click:tab'])
 </script>
