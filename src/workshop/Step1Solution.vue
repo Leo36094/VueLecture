@@ -1,27 +1,27 @@
 <script setup>
-import CardPanel from '@/components/Card/CardPanel.vue'
+import CardPanel, { CARD_TYPE } from '@/components/Card'
 
 const cardList = [
   {
-    type: 'normal',
+    type: CARD_TYPE.NORMAL,
     title: 'Basic'
   },
   {
-    type: 'warn',
+    type: CARD_TYPE.WARN,
     title: 'Intermediate'
   },
   {
-    type: 'danger',
+    type: CARD_TYPE.DANGER,
     title: 'Important'
   }
 ]
 </script>
 <template>
-  <div class="flex">
+  <div class="flex flex-wrap">
     <CardPanel
       v-for="(card, index) in cardList"
       :key="index"
-      class="mr-2"
+      class="mr-2 mb-2"
       :color-type="card.type"
       :title="card.title"
     />

@@ -6,6 +6,18 @@ import CardPanel from '@/components/Card'
 import CardItem from '@/components/Card/CardItem.vue'
 import BasicInput from '@/components/Input/BasicInput.vue'
 
+/**
+ * Expected Result:
+ * Form Input Bindings: https://vuejs.org/guide/essentials/forms.html
+ * 1. BasicInput
+ *    - CardItem will be added when click add button
+ *    - CardItem will be added when press enter
+ * 2. CardItem
+ *    - CardItem will be deleted when click delete button
+ *  */
+
+
+
 /**  Practice Start, Uncomment this block
  const defaultItem = {
    id: new Date().getTime(),
