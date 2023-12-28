@@ -1,13 +1,21 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { useRoute, RouterView } from 'vue-router'
+
+const route = useRoute()
 </script>
 
 <template>
-  <nav class="w-full bg-blue-100 text-black">
-    <div class="box-border flex px-4 h-12 items-center justify-between">
-      <router-link class="px-4 py-2 hover:bg-blue-200" to="/">Vue Basic</router-link>
-      <router-link class="px-4 py-2 hover:bg-blue-200" to="/step2">Step 2</router-link>
-      <router-link class="px-4 py-2 hover:bg-blue-200" to="/step3">Step 3</router-link>
+  <nav class="w-full bg-cyan-900 text-stone-300">
+    <div class="box-border flex px-4 py-2 h-12 items-center justify-between">
+      <router-link class="link" :class="{ 'link-active': route.name === 'home' }" to="/"
+        >Vue Basic</router-link
+      >
+      <router-link class="link" :class="{ 'link-active': route.name === 'step2' }" to="/step2"
+        >Events & Form Input Bindings</router-link
+      >
+      <router-link class="link" :class="{ 'link-active': route.name === 'step3' }" to="/step3"
+        >Step 3</router-link
+      >
       <!-- <router-link class="px-4 py-2 hover:bg-blue-200" to="/step4">Step 4</router-link>
       <router-link class="px-4 py-2 hover:bg-blue-200" to="/step5">Step 5</router-link> -->
     </div>
@@ -16,3 +24,11 @@ import { RouterView } from 'vue-router'
     <RouterView />
   </div>
 </template>
+<style scoped>
+.link {
+  @apply px-4 py-1 hover:bg-blue-200 hover:text-black;
+}
+.link-active {
+  @apply text-teal-600 hover:text-black font-bold border-b-2 border-teal-600;
+}
+</style>

@@ -18,6 +18,7 @@
       <span
         v-if="props.removeIcon"
         class="material-symbols-outlined ml-auto text-black cursor-pointer"
+        @click="emits('delete:click')"
       >
         delete
       </span>
@@ -52,7 +53,7 @@ const props = defineProps({
   }
 })
 
-const emits = defineEmits(['title:dblclick'])
+const emits = defineEmits(['title:dblclick', 'delete:click'])
 const title = ref(props.title)
 const editMode = ref(false)
 
