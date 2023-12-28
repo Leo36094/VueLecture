@@ -16,10 +16,12 @@ const route = useRoute()
       <router-link class="link" :class="{ 'link-active': route.name === 'step3' }" to="/step3"
         >Step 3</router-link
       >
-      <!-- <router-link class="px-4 py-2 hover:bg-blue-200" to="/step4">Step 4</router-link>
-      <router-link class="px-4 py-2 hover:bg-blue-200" to="/step5">Step 5</router-link> -->
+      <router-link class="link" :class="{ 'link-active': route.name === 'final' }" to="/final"
+        >Final</router-link
+      >
     </div>
   </nav>
+
   <div class="container box-border mx-auto flex flex-col items-center">
     <RouterView />
   </div>

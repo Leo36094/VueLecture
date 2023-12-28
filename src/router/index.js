@@ -21,6 +21,11 @@ const router = createRouter({
       path: '/step3',
       name: 'step3',
       component: () => import('../views/StepThree.vue')
+    },
+    {
+      path: '/final',
+      name: 'final',
+      component: () => import('../views/FinalStep.vue')
     }
   ]
 })
